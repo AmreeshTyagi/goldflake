@@ -1,5 +1,5 @@
 # Goldflake
-Generator to generate Bigint ID or unique key for 174 years inspired by Twitter's Snowflake and Sonyflake
+Generator to generate Bigint ID or unique key for 174 years (Approx 200k Ids/sec/machine on 8k distributed machines at once) inspired by Twitter's Snowflake and Sonyflake
 
 
 [![GoDoc](https://godoc.org/github.com/AmreeshTyagi/goldflake?status.svg)](http://godoc.org/github.com/AmreeshTyagi/goldflake)
