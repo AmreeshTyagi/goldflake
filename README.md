@@ -17,7 +17,9 @@ A Goldflake ID is composed of
     39 bits for time in units of 10 msec                      // Similar to Sonyflake
     13 bits for a machine id or app instance id or shard id   // Balance between Snowflake and Sonyflake (If you can live with 8192 machines)
     11 bits for a sequence number                             // To generate 2^11=2048 unique ids per 10 millisecond or 204800 keys/sec on one node
-    
+
+For PostgreSQL -https://github.com/AmreeshTyagi/goldflake-pg
+
 ## Comparison chart
 |                                                  	| Twitter Snowflake       	| Sonyflake                                                   	| Goldflake                                                                                                                                                                                                                                       	|
 |--------------------------------------------------	|-------------------------	|-------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
