@@ -9,7 +9,14 @@ Generator to generate Bigint ID or unique key for 174 years **(Approx 200k uniqu
 
 Goldflake is a distributed unique ID generator inspired by [Twitter's Snowflake](https://blog.twitter.com/2010/announcing-snowflake) & [Sonyflake](https://github.com/sony/sonyflake)
 
-Goal of Goldflake is to provide a unique ID generator which can be used on database level as well as application level to generate bigint unique IDs for lifetime without compromising performance.
+## Goal:
+To become application & database oriented unique bigint id generator for lifetime without compromising performance.
+
+### Why Goldflake id instead of Sonyflake?
+1. Sonyflake generator is good, if you are generating all Ids at application end. 
+2. Sonyflake has a limit of 25K id/sec on single node, which seems low in today's scenarios when we are talking about cloud & databases can be created with high system configurations easily.
+3. I have tried & tested Sonyflake bits configuration on Postgres-12 on my machine (Dell XPS, Intel® Core™ i7-9750H Processor 6 Core 12 Threads, 16GB RAM, SSD) & observed duplicate key conflict, which is a very basic configuration for Databases now a days. 
+4. Goldflake is usnig 11 bits for sequence instead of 8 (as used by Sonyflake) which gives more unique ID generation on databases as well.
 
 So it has a different bit assignment from Snowflake & Sonyflake.
 A Goldflake ID is composed of
